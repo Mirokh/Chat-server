@@ -22,7 +22,6 @@ const UserController = {
             phone_number: req.body.phone_number,
             password: req.body.password,
         });
-
         user.save().then(result => {
             res.send(result)
         }).catch(result => {
@@ -54,11 +53,9 @@ const UserController = {
     },
     signUp: async (req, res) => {
         var success, message, token, status;
-
         var data = await User
             .findAll({where: {email: req.body.email}})
             .then(result => result);
-
         if (data.length) {
             success = false;
             message = 'Email address already in use, use another!';
