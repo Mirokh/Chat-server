@@ -1,7 +1,7 @@
 const User = require('@models').User;
 const auth = require('@lib/authentication/auth');
 const bcrypt = require('@lib/my-bcrypt');
-const Storage = require('@lib/storage/index').uploadImageToStorage();
+// const Storage = require('@lib/storage/index').uploadImageToStorage();
 
 const UserController = {
     index: (req, res) => {
@@ -48,8 +48,8 @@ const UserController = {
         })
     },
     upload: (req, res) => {
-        var success = Storage;
-        res.json(success)
+        // var success = Storage;
+        // res.json(success)
     },
     signUp: async (req, res) => {
         var success, message, token, status;

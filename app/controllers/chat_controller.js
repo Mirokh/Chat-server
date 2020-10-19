@@ -70,6 +70,9 @@ const ChatController = {
             is_blocked: 0,
         }]).then(result => result)
             .catch(result => result);
+    },
+    get_rooms: async (req, res) => {
+        res.json('asdasdsad')
     }
 };
 
